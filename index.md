@@ -197,10 +197,6 @@ class OutputPlane(OpticalElement):
 
 Plotting a single ray
 ```python
-import numpy
-import matplotlib
-
-
 P1 = Ray(r = [0.001,0,0], dir = [0,0,1])
 A0 = SphericalRefraction(100.,0.03,1,1.5,100)
 A0.intercept(P1)
@@ -218,7 +214,7 @@ P1.vertices()
 z = []
 x = []
 
-#writing out the code for drawing a 2D graph for z, x axis to find the paraxial focus
+# drawing a 2D graph for z, x axis to find the paraxial focus
    
 for i in P1.vertices():
     z.append(i[2])
