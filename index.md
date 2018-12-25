@@ -225,3 +225,28 @@ plt.xticks(fontsize=25)
 plt.yticks(fontsize=25)
 ```
 
+<img src="https://github.com/FlorisWu/optical-ray-tracer/blob/master/single_ray.jpg?raw=true" width="900"/>
+
+Plotting a bundle of rays
+```python
+D1 = SphericalRefraction(105.,0.02,1,1.5168,100)
+E1 = OutputPlane(138.555)
+H1 = Ray(r = [0.001,0,80], dir = [0,0,1])
+B1 = bun(H1,4,10,8)
+
+for i in B1:
+    D1.propagate_ray(i)
+    E1.propagate_ray(i)
+    x=[]
+    z=[]
+    
+    for q in i.vertices():
+        x.append(q[0])
+        z.append(q[2])
+        plt.plot(z,x)
+        plt.xticks(fontsize=25)
+        plt.yticks(fontsize=25)
+```
+
+
+<img src="https://github.com/FlorisWu/optical-ray-tracer/blob/master/bundle_of_rays.png?raw=true" width="900"/>
