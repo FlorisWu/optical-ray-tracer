@@ -221,4 +221,7 @@ for i in P1.vertices():
 
 fig=plt.figure(figsize=(20,10))    
 plt.plot(z,x)
+plt.xticks(fontsize=25)
+plt.yticks(fontsize=25)
 ```
+
