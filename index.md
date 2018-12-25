@@ -80,11 +80,11 @@ class Ray:
         
     def p(self):
         return self.r
-        #the position vector
+        # position vector
         
     def k(self):
         return self.dir/linalg.norm(self.dir)
-        #the direction vector is normalised
+        # direction vector is normalised
        
     def append(self, p, k):
         self.listofpositions.append(p)
@@ -96,11 +96,10 @@ class Ray:
         return self.listofpositions
 ```
 
-Propagating a ray the optical element
+Propagating the ray through the optical element
 ```python
 class OpticalElement:
     def propagate_ray(self, Ray):
-        #propagate a ray through the optical element
 ```
 
 Defining a spherical surface for the refraction to happen
