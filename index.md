@@ -14,7 +14,7 @@ import numpy as np
 import matplotlib
 ```
 
-Defining function based on Snell's law
+Defining function here based on Snell's law
 ```python
 def snell(k1, n, n1, n2):
     #kn is the incident vector, nn is the normal vector, and kn and nn are both normalised
